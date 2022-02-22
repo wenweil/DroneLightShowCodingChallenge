@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+service DroneControl {
+    rpc DroneUpdate (DroneUpdateCommand) returns (DroneUpdateResponse);
+    rpc GetDroneInfo (GetAllDroneRequest) returns (DroneInfoReqResponse);
+    rpc DroneState (DroneStateReq) returns (DroneStateResponse);
+}
+
+message DroneInfoReqResponse {
+    repeated Node nodes = 1;
+}
+
+message GetAllDroneRequest {
+
+}
+
+message DroneStateReq{
+    string id = 1;
+}
+
+message DroneStateResponse {
+    Node node = 1;
+}
+
+message Node {
+    string id = 1;
+    int32 posX = 2;
+    int32 posY = 3;
+    int32 posZ = 4;
+    float r = 5;
+    float g = 6;
+    float b = 7;
+    float a = 8;
+}
+
+message DroneUpdateCommand {
+    string id = 1;
+    int32 posx = 2;
+    int32 posy = 3;
+    int32 posz = 4;
+    float r = 5;
+    float g = 6;
+    float b = 7;
+    float a = 8;
+}
+
+message DroneUpdateResponse{
+    bool success = 1;
+}
