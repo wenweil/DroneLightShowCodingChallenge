@@ -24,9 +24,9 @@ message DroneStateResponse {
 
 message Node {
     string id = 1;
-    int32 posX = 2;
-    int32 posY = 3;
-    int32 posZ = 4;
+    float posX = 2;
+    float posY = 3;
+    float posZ = 4;
     float r = 5;
     float g = 6;
     float b = 7;
@@ -35,9 +35,9 @@ message Node {
 
 message DroneUpdateCommand {
     string id = 1;
-    int32 posx = 2;
-    int32 posy = 3;
-    int32 posz = 4;
+    float posx = 2;
+    float posy = 3;
+    float posz = 4;
     float r = 5;
     float g = 6;
     float b = 7;

@@ -1,4 +1,4 @@
-#todo: connect RPC functions
+
 
 from direct.showbase.ShowBase import ShowBase
 from direct.stdpy.threading import Thread
@@ -75,7 +75,7 @@ class App(ShowBase):
     def __init__(self):
         ShowBase.__init__(self)
         self.disableMouse()
-        self.camera.setPos(0,-100,27)
+        self.camera.setPos(0,-150,60)
         cnt = 1
         for i in range(SWARM_ROWS):
             for j in range(SWARM_COLS):
