@@ -1,5 +1,5 @@
 /include
 /lib
 /scripts
-/shape/__pycache__
-/control/__pycache__
+__pycache__/
+*.pyc
